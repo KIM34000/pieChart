@@ -41,19 +41,17 @@ public class FruitsArrayList extends Application {
         stage.show();
     }
 
-    //methode permettant de creer une observablelist<PieChart.Data> a partir de
-    //l'ArrayList en utilisant le nom et la quantite
+   
     public ObservableList<PieChart.Data> getData(List<Fruit> list) {
-        //data est une Observablelist qui contiendra des pieChar.Data
-        //Voir premier exemple dans le premier fichier
+        
         ObservableList<PieChart.Data> data
                 = FXCollections.observableArrayList();
         for (Fruit fruit : list) {
-            //on doit ajouter dans data,des PieChart.Data("nom",Quantite
+            
             data.add(new PieChart.Data(fruit.getNom(),
                     fruit.getQuantite())); //ajoute de la donnee dan data
         }
-        return data; //la methode retourne la observablelist<PieChart.Data.data
+        return data;
     }
 
     public static void main(String[] args) {
